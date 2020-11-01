@@ -237,4 +237,21 @@ fn main() {
     }
 
     let mut vaisseau = Vaisseau::new();
+    match vaisseau.salon {
+        Some(s) => {
+            println!("ce vaisseau a un salon");
+        },
+        None => {
+            println!("ce vaisseau n'a pas de salon");
+        }
+    }
+    vaisseau.salon = Some(Salon::new());
+    match vaisseau.salon {
+        Some(s) => {
+            println!("ce vaisseau a un salon");
+        },
+        None => {
+            println!("ce vaisseau n'a pas de salon");
+        }
+    }
 }
