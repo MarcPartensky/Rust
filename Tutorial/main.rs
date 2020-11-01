@@ -90,12 +90,16 @@ fn main() {
     // }
 
 
-    let mut i : i32 = 0;
-    loop {
-        println!("{:?}", i);
-        i += 1;
-        if i > 10 {
-            break;
-        }
-    }
+    // let mut i : i32 = 0;
+    // loop {
+    //     println!("{:?}", i);
+    //     i += 1;
+    //     if i > 10 {
+    //         break;
+    //     }
+    // }
+
+    // for i in 0..10 {
+    //     println!("i vaut : {}", i);
+    // }
 }
