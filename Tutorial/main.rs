@@ -4,12 +4,16 @@
 // use tetra::graphics::{self, Color};
 // use tetra::{Context, ContextBuilder, State};
 
-fn machin(i: i32) -> Option<String> {
-    if i < 10 {
-        Some("variable inférieure à 10".to_owned())
-    } else {
-        None
-    }
+// fn machin(i: i32) -> Option<String> {
+//     if i < 10 {
+//         Some("variable inférieure à 10".to_owned())
+//     } else {
+//         None
+//     }
+// }
+
+fn addition(nb1: i32, nb2: i32) -> i32 {
+    nb1 + nb2
 }
 
 fn main() {
@@ -138,14 +142,16 @@ fn main() {
     // }
 
 
-    'global: for _ in 0..10 {
-        'outer: for x in 0..10 {
-            'inner: for y in 0..10 {
-                if x > 3 { break 'global; } // on arrête la boucle qui s'appelle global
-                if x % 2 == 0 { continue 'outer; } // on continue la boucle sur x
-                if y % 2 == 0 { continue 'inner; } // on continue la boucle sur y
-                println!("x: {}, y: {}", x, y);
-            }
-        }
-}
+    // 'global: for _ in 0..10 {
+    //     'outer: for x in 0..10 {
+    //         'inner: for y in 0..10 {
+    //             if x > 3 { break 'global; } // on arrête la boucle qui s'appelle global
+    //             if x % 2 == 0 { continue 'outer; } // on continue la boucle sur x
+    //             if y % 2 == 0 { continue 'inner; } // on continue la boucle sur y
+    //             println!("x: {}, y: {}", x, y);
+    //         }
+    //     }
+    // }
+    //
+    println!("1 + 2 = {}", addition(1, 2));
 }
