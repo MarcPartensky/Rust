@@ -25,13 +25,13 @@
 // }
 
 
-fn fait_quelque_chose() {
-    println!("Je fais quelque chose !");
-}
-// ou bien :
-fn fait_quelque_chose_2() -> () {
-    println!("Je fais quelque chose !");
-}
+// fn fait_quelque_chose() {
+//     println!("Je fais quelque chose !");
+// }
+// // ou bien :
+// fn fait_quelque_chose_2() -> () {
+//     println!("Je fais quelque chose !");
+// }
 
 fn main() {
     // ContextBuilder::new("Pong", 800, 600)
@@ -172,5 +172,11 @@ fn main() {
     //
     // println!("1 + 2 = {}", addition(1, 2));
 
-    fait_quelque_chose();
+    // fait_quelque_chose();
+
+    let var = if true {
+        1u32
+    } else {
+        2u32
+    };
 }
