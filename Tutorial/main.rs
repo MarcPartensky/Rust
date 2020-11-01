@@ -68,7 +68,6 @@ fn main() {
         println!("{}", &s)
     }
 
-
     let mut i : i32 = 0;
     let mut v = vec!(1, 2, 3);
     loop {
@@ -77,5 +76,6 @@ fn main() {
             None => break,
         }
     }
-}
 
+    println!("bidule");
+}
