@@ -1,5 +1,7 @@
 #!/usr/bin/env run-cargo-script
 
+use std::fs::File;
+
 // extern crate rand;
 // use tetra::graphics::{self, Color};
 // use tetra::{Context, ContextBuilder, State};
@@ -32,6 +34,19 @@
 // fn fait_quelque_chose_2() -> () {
 //     println!("Je fais quelque chose !");
 // }
+
+fn test_expression(x: i32) -> i32 {
+    if x < 0 {
+        println!("{} < 0", x);
+        -1
+    } else if x == 0 {
+        println!("{} == 0", x);
+        0
+    } else {
+        println!("{} > 0", x);
+        1
+    }
+}
 
 fn main() {
     // ContextBuilder::new("Pong", 800, 600)
@@ -174,9 +189,31 @@ fn main() {
 
     // fait_quelque_chose();
 
-    let var = if true {
-        1u32
-    } else {
-        2u32
+    // let var = if true {
+    //     1u32
+    // } else {
+    //     2u32
+    // };
+    // println!("{}", var);
+
+    // let mut var = 0i32;
+    // let var2 = (var = 1i32);
+
+    // println!("{:?}", var2);
+
+
+    // test_expression(5i32);
+    //
+    let mut fichier = match File::open("readme.md") {
+        Ok(f) => {
+            println!("we're in");
+            f
+        },
+        Err(e) => {
+            println!("{}", e);
+            return;
+        }
     };
+
+
 }
