@@ -1,6 +1,6 @@
 #!/usr/bin/env run-cargo-script
 
-use std::fs::File;
+// use std::fs::File;
 
 // extern crate rand;
 // use tetra::graphics::{self, Color};
@@ -204,16 +204,37 @@ fn main() {
 
     // test_expression(5i32);
     //
-    let mut fichier = match File::open("readme.md") {
-        Ok(f) => {
-            println!("we're in");
-            f
-        },
-        Err(e) => {
-            println!("{}", e);
-            return;
+    // let mut fichier = match File::open("readme.md") {
+    //     Ok(f) => {
+    //         println!("we're in");
+    //         f
+    //     },
+    //     Err(e) => {
+    //         println!("{}", e);
+    //         return;
+    //     }
+    // };
+
+
+    // let mut v = vec!(1, 2);
+
+    // for i in 1..3 {
+    //     println!("{:?}", v.pop());
+    // }
+
+    struct Vaisseau {
+        // pleins de trucs
+        salon: Option<Salon>
+    }
+
+    impl Vaisseau {
+        pub fn new() -> Vaisseau {
+            Vaisseau {
+                // on initialise le reste
+                salon: None // on n'a pas de salon
+            }
         }
-    };
+    }
 
-
+    let mut vaisseau = Vaisseau::new();
 }
