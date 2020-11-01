@@ -111,7 +111,16 @@ fn main() {
     // }
     //
 
-    for (i, j) in (5..10).enumerate() {
-        println!("i = {} et j = {}", i, j);
-    }
+    // for (i, j) in (5..10).enumerate() {
+    //     println!("i = {} et j = {}", i, j);
+    // }
+
+    // let v = vec!("a", "b", "c", "d");
+
+    // for (i, value) in v.iter().enumerate() {
+    //     println!("i = {} et value = \"{}\"", i, value);
+    // }
+
+    // 'outer': for x in 0.10
+
 }
