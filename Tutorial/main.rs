@@ -227,6 +227,18 @@ fn main() {
         salon: Option<Salon>
     }
 
+    struct Salon {
+
+    }
+
+    impl Salon {
+        pub fn new() -> Salon {
+            Salon {
+
+            }
+        }
+    }
+
     impl Vaisseau {
         pub fn new() -> Vaisseau {
             Vaisseau {
@@ -237,6 +249,7 @@ fn main() {
     }
 
     let mut vaisseau = Vaisseau::new();
+
     match vaisseau.salon {
         Some(s) => {
             println!("ce vaisseau a un salon");
@@ -245,7 +258,9 @@ fn main() {
             println!("ce vaisseau n'a pas de salon");
         }
     }
+
     vaisseau.salon = Some(Salon::new());
+
     match vaisseau.salon {
         Some(s) => {
             println!("ce vaisseau a un salon");
