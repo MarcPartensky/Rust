@@ -64,18 +64,38 @@ fn main() {
     //     None => {}
     // }
 
-    if let Some(s) = machin(1) {
-        println!("{}", &s)
-    }
+    // if let Some(s) = machin(1) {
+    //     println!("{}", &s)
+    // }
+
+    // let mut i : i32 = 0;
+    // let mut v = vec!(1, 2, 3);
+    // loop {
+    //     match v.pop() {
+    //         Some(x) => println!("{}", x),
+    //         None => break,
+    //     }
+    // }
+
+    // println!("bidule");
+    //
+    // let mut end = false;
+    // while end == false {
+    //     println!("spam")
+
+    // }
+
+    // loop {
+    //     println!("spam")
+    // }
+
 
     let mut i : i32 = 0;
-    let mut v = vec!(1, 2, 3);
     loop {
-        match v.pop() {
-            Some(x) => println!("{}", x),
-            None => break,
+        println!("{:?}", i);
+        i += 1;
+        if i > 10 {
+            break;
         }
     }
-
-    println!("bidule");
 }
