@@ -13,7 +13,7 @@
 // }
 
 fn addition(nb1: i32, nb2: i32) -> i32 {
-    nb1 + nb2
+    return nb1 + nb2;
 }
 
 fn main() {
