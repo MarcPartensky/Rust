@@ -16,12 +16,21 @@
 //     return nb1 + nb2;
 // }
 
-fn get_bigger(nb1:  i32, nb2:  i32) ->  i32 {
-    if nb1 > nb2 {
-        nb1
-    } else {
-        nb2
-    }
+// fn get_bigger(nb1:  i32, nb2:  i32) ->  i32 {
+//     if nb1 > nb2 {
+//         nb1
+//     } else {
+//         nb2
+//     }
+// }
+
+
+fn fait_quelque_chose() {
+    println!("Je fais quelque chose !");
+}
+// ou bien :
+fn fait_quelque_chose_2() -> () {
+    println!("Je fais quelque chose !");
 }
 
 fn main() {
@@ -161,5 +170,7 @@ fn main() {
     //     }
     // }
     //
-    println!("1 + 2 = {}", addition(1, 2));
+    // println!("1 + 2 = {}", addition(1, 2));
+
+    fait_quelque_chose();
 }
