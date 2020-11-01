@@ -1,1 +1,0 @@
-{"rustc":17941782008528629481,"features":"[\"default\", \"js-sys\", \"wasm-bindgen\", \"web-sys\", \"web_sys\"]","target":3081537485291001813,"profile":16668067249205866872,"path":5371322683406897927,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/glow-feeb4b14848e9686/dep-lib-glow"}}],"rustflags":[],"metadata":10511704132818883558,"config":0}
