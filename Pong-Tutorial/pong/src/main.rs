@@ -56,7 +56,26 @@ fn main() {
     //         println!("je ne connais pas cette langue...");
     //     }
     // }
-    println!("{:?}", machin(5i32));
-    println!("test");
+    // println!("{:?}", machin(5i32));
+    // println!("test");
+
+    // match machin(1) {
+    //     Some(s) => println!("{}", &s),
+    //     None => {}
+    // }
+
+    if let Some(s) = machin(1) {
+        println!("{}", &s)
+    }
+
+
+    let mut i : i32 = 0;
+    let mut v = vec!(1, 2, 3);
+    loop {
+        match v.pop() {
+            Some(x) => println!("{}", x),
+            None => break,
+        }
+    }
 }
 
