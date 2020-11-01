@@ -222,51 +222,53 @@ fn main() {
     //     println!("{:?}", v.pop());
     // }
 
-    struct Vaisseau {
-        // pleins de trucs
-        salon: Option<Salon>
-    }
+    // struct Vaisseau {
+    //     // pleins de trucs
+    //     salon: Option<Salon>
+    // }
 
-    struct Salon {
+    // struct Salon {
 
-    }
+    // }
 
-    impl Salon {
-        pub fn new() -> Salon {
-            Salon {
+    // impl Salon {
+    //     pub fn new() -> Salon {
+    //         Salon {
 
-            }
-        }
-    }
+    //         }
+    //     }
+    // }
 
-    impl Vaisseau {
-        pub fn new() -> Vaisseau {
-            Vaisseau {
-                // on initialise le reste
-                salon: None // on n'a pas de salon
-            }
-        }
-    }
+    // impl Vaisseau {
+    //     pub fn new() -> Vaisseau {
+    //         Vaisseau {
+    //             // on initialise le reste
+    //             salon: None // on n'a pas de salon
+    //         }
+    //     }
+    // }
 
-    let mut vaisseau = Vaisseau::new();
+    // let mut vaisseau = Vaisseau::new();
 
-    match vaisseau.salon {
-        Some(s) => {
-            println!("ce vaisseau a un salon");
-        },
-        None => {
-            println!("ce vaisseau n'a pas de salon");
-        }
-    }
+    // match vaisseau.salon {
+    //     Some(s) => {
+    //         println!("ce vaisseau a un salon");
+    //     },
+    //     None => {
+    //         println!("ce vaisseau n'a pas de salon");
+    //     }
+    // }
 
-    vaisseau.salon = Some(Salon::new());
+    // vaisseau.salon = Some(Salon::new());
 
-    match vaisseau.salon {
-        Some(s) => {
-            println!("ce vaisseau a un salon");
-        },
-        None => {
-            println!("ce vaisseau n'a pas de salon");
-        }
-    }
+    // match vaisseau.salon {
+    //     Some(s) => {
+    //         println!("ce vaisseau a un salon");
+    //     },
+    //     None => {
+    //         println!("ce vaisseau n'a pas de salon");
+    //     }
+    // }
+
+    panic!("C'est la merde!");
 }
