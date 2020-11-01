@@ -102,4 +102,16 @@ fn main() {
     // for i in 0..10 {
     //     println!("i vaut : {}", i);
     // }
+    //
+
+    // let v = vec!(1, 4, 5, 10, 6);
+
+    // for value in v {
+    //     println!("{}", value);
+    // }
+    //
+
+    for (i, j) in (5..10).enumerate() {
+        println!("i = {} et j = {}", i, j);
+    }
 }
