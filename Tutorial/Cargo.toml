@@ -1,0 +1,8 @@
+[package]
+name = "tuto de guillaume gomez"
+version = "0.0.1"
+authors = ["Marc Partensky <marc.partensky@gmail.com>"]
+
+
+[dependencies]
+time = "*"

@@ -1,6 +1,8 @@
 #!/usr/bin/env run-cargo-script
 
 // use std::fs::File;
+extern crate time;
+
 
 // extern crate rand;
 // use tetra::graphics::{self, Color};
@@ -35,18 +37,18 @@
 //     println!("Je fais quelque chose !");
 // }
 
-fn test_expression(x: i32) -> i32 {
-    if x < 0 {
-        println!("{} < 0", x);
-        -1
-    } else if x == 0 {
-        println!("{} == 0", x);
-        0
-    } else {
-        println!("{} > 0", x);
-        1
-    }
-}
+// fn test_expression(x: i32) -> i32 {
+//     if x < 0 {
+//         println!("{} < 0", x);
+//         -1
+//     } else if x == 0 {
+//         println!("{} == 0", x);
+//         0
+//     } else {
+//         println!("{} > 0", x);
+//         1
+//     }
+// }
 
 fn main() {
     // ContextBuilder::new("Pong", 800, 600)
@@ -270,5 +272,7 @@ fn main() {
     //     }
     // }
 
-    panic!("C'est la merde!");
+    // panic!("C'est la merde!");
+
+    println!("{:?}", time::now());
 }
