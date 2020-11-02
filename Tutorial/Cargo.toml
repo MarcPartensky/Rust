@@ -1,8 +1,9 @@
 [package]
-name = "tuto de guillaume gomez"
+name = "tuto_de_guillaume_gomez"
 version = "0.0.1"
 authors = ["Marc Partensky <marc.partensky@gmail.com>"]
+edition = "2018"
 
 
 [dependencies]
-time = "*"
+ferris-says = "0.2.0"

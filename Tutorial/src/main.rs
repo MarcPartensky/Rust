@@ -1,7 +1,8 @@
-#!/usr/bin/env run-cargo-script
-
+#!/usr/bin/env cargo run
 // use std::fs::File;
-extern crate time;
+
+// extern crate time;
+// use time::now;
 
 
 // extern crate rand;
@@ -50,7 +51,7 @@ extern crate time;
 //     }
 // }
 
-fn main() {
+// fn main() {
     // ContextBuilder::new("Pong", 800, 600)
     //     .quit_on_escape(true)
     //     .build();
@@ -274,5 +275,18 @@ fn main() {
 
     // panic!("C'est la merde!");
 
-    println!("{:?}", time::now());
+    // println!("{:?}", time::now());
+// }
+
+extern crate ferris_says;
+
+use ferris_says::say;
+use std::io::{ stdout, BufWriter };
+
+fn main() {
+    let out = b"Hello fellow Rustaceans!";
+    let width = 24;
+
+    let mut writer = BufWriter::new(stdout());
+    say(out, width, &mut writer).unwrap();
 }
