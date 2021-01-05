@@ -3,12 +3,13 @@ use std::net::TcpListener;
 use std::sync::mpsc;
 use std::thread;
 
-const LOCAL: &str = "127.0.0.1:6000";
+const LOCAL : &str = "127.0.0.1:6000";
 const MSG_SIZE: usize = 32;
 
 fn sleep() {
     thread::sleep(::std::time::Duration::from_millis(100));
 }
+
 
 fn main() {
     let server = TcpListener::bind(LOCAL).expect("Listener failed to bind");
@@ -16,6 +17,7 @@ fn main() {
 
     let mut clients = vec![];
     let (tx, rx) = mpsc::channel::<String>();
+
     loop {
         if let Ok((mut socket, addr)) = server.accept() {
             println!("Client {} connected", addr);
@@ -23,7 +25,7 @@ fn main() {
             let tx = tx.clone();
             clients.push(socket.try_clone().expect("failed to clone client"));
 
-            thread::spawn(move || lop {
+            thread::spawn(move || loop {
                 let mut buff = vec![0; MSG_SIZE];
 
                 match socket.read_exact(&mut buff) {
@@ -33,15 +35,13 @@ fn main() {
 
                         println!("{}: {:?}", addr, msg);
                         tx.send(msg).expect("failed to send msg to rx");
-                    }, 
+                    },
                     Err(ref err) if err.kind() == ErrorKind::WouldBlock => (),
                     Err(_) => {
                         println!("closing connection with: {}", addr);
                         break;
                     }
                 }
-
-                sleep();
             });
         }
 
@@ -56,4 +56,4 @@ fn main() {
 
         sleep();
     }
-}o
+}
